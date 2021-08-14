@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      h1 {
+        text-align: center;
+        font-family: helvetica, arial, sans-serif;
+      }
+      h2 {
+        text-align: center;
+        font-family: helvetica, arial, sans-serif;
+      }
+      body {
+        width: 960px;
+        margin: 0px auto;
+        background: rgb(30, 30, 30);
+        padding-top: 50px;
+        font-family: helvetica, arial, sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script>
+      var weddingDates = [];
+      weddingDates.push(new Date("2021-08-13"));
+
+      var today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      if (weddingDates.includes(today)) {
+        document.body.innerHTML = "<h1>Nah, he's not</h1>";
+      } else {
+        document.body.innerHTML = "<h1>Yes, another one</h1>";
+      }
+    </script>
+  </body>
+</html>
