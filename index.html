@@ -9,6 +9,7 @@
       h2 {
         text-align: center;
         font-family: helvetica, arial, sans-serif;
+        
       }
       body {
         width: 960px;
@@ -26,15 +27,33 @@
   <body>
     <script>
       var weddingDates = [];
-      weddingDates.push(new Date("2021-08-13"));
+      weddingDates.push(new Date("2021-08-13T00:00:00.000-04:00").getTime());
+      weddingDates.push(new Date("2021-09-01T00:00:00.000-04:00").getTime());
+      weddingDates.push(new Date("2021-09-02T00:00:00.000-04:00").getTime());
+      weddingDates.push(new Date("2021-09-03T00:00:00.000-04:00").getTime());
+      weddingDates.push(new Date("2021-09-04T00:00:00.000-04:00").getTime());
+      weddingDates.push(new Date("2021-09-05T00:00:00.000-04:00").getTime());
+      weddingDates.push(new Date("2021-09-24T00:00:00.000-04:00").getTime());
+      weddingDates.push(new Date("2021-09-25T00:00:00.000-04:00").getTime());
+      weddingDates.push(new Date("2021-11-14T00:00:00.000-04:00").getTime());
+      weddingDates.push(new Date("2021-12-15T00:00:00.000-04:00").getTime());
+      weddingDates.push(new Date("2021-12-16T00:00:00.000-04:00").getTime());
+      weddingDates.push(new Date("2021-12-17T00:00:00.000-04:00").getTime());
+      weddingDates.push(new Date("2022-01-28T00:00:00.000-04:00").getTime());
+      weddingDates.push(new Date("2022-05-01T00:00:00.000-04:00").getTime());
+      weddingDates.push(new Date("2022-06-19T00:00:00.000-04:00").getTime());
+      weddingDates.push(new Date("2022-06-25T00:00:00.000-04:00").getTime());
 
       var today = new Date();
       today.setHours(0, 0, 0, 0);
+      today = today.getTime()
+
+      console.log(today)
 
       if (weddingDates.includes(today)) {
-        document.body.innerHTML = "<h1>Nah, he's not</h1>";
+        document.body.innerHTML = "<h1>🎊 Yes, another one 🎊</h1>";
       } else {
-        document.body.innerHTML = "<h1>Yes, another one</h1>";
+        document.body.innerHTML = "<h1>Nah, he's not</h1>";
       }
     </script>
   </body>
